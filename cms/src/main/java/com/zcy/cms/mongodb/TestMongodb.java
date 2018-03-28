@@ -18,16 +18,17 @@ public class TestMongodb {
             MongoClient mongoClient = new MongoClient("113.209.26.156", 27017);
             //2.链接导数据库
             MongoDatabase mongoDatabase = mongoClient.getDatabase("zcy_mongodb");
-
+            //3.获取集合
             MongoCollection<Document> collection = mongoDatabase.getCollection("zcy_mongodb");
 
-            //3.插入文档
+            //4.插入文档
             Document document = new Document("title","MongoDbDocument_java").append("description","database").append("likes",100).append("by","fly");
             Document document2 = new Document("title","MongoDbDocument_java2").append("description","database2").append("likes",1002).append("by","fly2");
             List<Document> list = new ArrayList<Document>();
             list.add(document);
             list.add(document2);
 
+            //集合插入文档
             collection.insertMany(list);
 
             System.out.println("链接数据库成功");
