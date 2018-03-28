@@ -1,4 +1,4 @@
-package com.zcy.cms.test;
+package com.zcy.cms.mail;
 
 import javax.mail.Message;
 import javax.mail.Session;

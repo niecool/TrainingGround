@@ -1,6 +1,6 @@
 package com.zcy.cms.interview;
 
-import com.zcy.cms.test.Test;
+import com.zcy.cms.mail.Test;
 
 public class AnoymousClass {
 private String name;

@@ -1,4 +1,4 @@
-package com.zcy.cms.test;
+package com.zcy.cms.mail;
 
 public interface Test {
 

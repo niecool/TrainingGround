@@ -1,4 +1,4 @@
-package com.zcy.cms;
+package com.zcy.cms.redis;
 
 import redis.clients.jedis.*;
 
