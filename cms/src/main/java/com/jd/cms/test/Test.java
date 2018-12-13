@@ -1,5 +1,5 @@
 package com.jd.cms.test;
 
-public interface test {
+public interface Test {
 
 }
