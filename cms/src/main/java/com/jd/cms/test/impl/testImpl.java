@@ -1,7 +1,7 @@
 package com.jd.cms.test.impl;
 
-import com.jd.cms.test.test;
+import com.jd.cms.test.Test;
 
-public class testImpl implements test {
+public class TestImpl implements Test {
 
 }
