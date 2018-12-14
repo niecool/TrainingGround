@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+    <!--
+        <property>
+            <name>mapreduce.task.io.sort.mb</name>
+            <value>256</value>
+        </property>
+    -->
+    <property>
+        <name>mapreduce.reduce.shuffle.parallelcopies</name>
+        <value>5</value>
+    </property>
+
+    <property>
+        <name>mapred.job.reuse.jvm.num.tasks</name>
+        <value>3</value>
+    </property>
+    <property>
+        <name>mapreduce.map.memory.mb</name>
+        <value>2048</value>
+    </property>
+    <property>
+        <name>mapreduce.reduce.memory.mb</name>
+        <value>2048</value>
+    </property>
+    <property>
+        <name>mapreduce.jobhistory.address</name>
+        <value>hadoopcm0:10020</value>
+    </property>
+
+    <property>
+        <name>mapreduce.jobhistory.webapp.address</name>
+        <value>hadoopcm0:19888</value>
+    </property>
+
+    <property>
+        <name>mapred.job.history.server.embedded</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>mapreduce.jobhistory.joblist.cache.size</name>
+        <value>10000</value>
+    </property>
+    <property>
+        <name>mapreduce.jobhistory.max-age-ms</name>
+        <value>1209600000</value>
+    </property>
+    <property>
+        <name>mapreduce.tasktracker.map.tasks.maximum</name>
+        <value>2</value>
+        <description>The maximum number of map tasks that will be run
+            simultaneously by a task tracker.
+        </description>
+    </property>
+
+    <property>
+        <name>mapreduce.tasktracker.reduce.tasks.maximum</name>
+        <value>2</value>
+        <description>The maximum number of reduce tasks that will be run
+            simultaneously by a task tracker.
+        </description>
+    </property>
+</configuration>

@@ -2,22 +2,18 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jd</groupId>
-  <artifactId>cms</artifactId>
-  <packaging>war</packaging>
+  <artifactId>hadoop-example</artifactId>
+  <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>cms Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
-<<<<<<< Updated upstream
 
-
-
-
-=======
   <properties>
     <spring.version>3.2.0.RELEASE</spring.version>
+    <hadoop.version>2.2.0</hadoop.version>
   </properties>
->>>>>>> Stashed changes
+
   <dependencies>
 
     <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
@@ -31,17 +27,10 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
-<<<<<<< Updated upstream
-=======
 
-    <dependency>
-      <groupId>net.sf.barcode4j</groupId>
-      <artifactId>barcode4j</artifactId>
-      <version>2.1</version>
-    </dependency>
 
     <!-- spring mvc start-->
     <dependency>
@@ -101,11 +90,19 @@
     <!-- spring mvc end-->
 
 
+    <!-- hadoop start-->
+    <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-client</artifactId>
+      <version>${hadoop.version}</version>
+    </dependency>
 
 
->>>>>>> Stashed changes
+    <!-- hadoop end-->
+
+
   </dependencies>
   <build>
-    <finalName>cms</finalName>
+    <finalName>hadoop-example</finalName>
   </build>
 </project>
