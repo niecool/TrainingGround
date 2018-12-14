@@ -46,7 +46,7 @@ public class HbaseTest {
 //        ut.createPath(fs,path3);
 //        Path hdfsFile3 = new Path("/user/zcyTest/input/hdfsShell.txt");
 //        ut.copyFileBetweenHDFS(fs,hdfsFile,hdfsFile3);
-        for (int i = 1; i < 14; i++) {
+        for (int i = 1; i < 100; i++) {
             ut.dropPath(fs, new Path("/user/zcyTest/output" + i));
         }
     }

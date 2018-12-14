@@ -85,7 +85,7 @@ public class WordCount {
     job.setOutputKeyClass(Text.class);
     job.setOutputValueClass(IntWritable.class);
     Path inputPath = new Path("/user/zcyTest/input");
-    Path outputPath = new Path("/user/zcyTest/output18");
+    Path outputPath = new Path("/user/zcyTest/output1");
     FileInputFormat.addInputPath(job, inputPath);
     FileOutputFormat.setOutputPath(job, outputPath);
 //    FileInputFormat.addInputPath(job, new Path(args[0]));
