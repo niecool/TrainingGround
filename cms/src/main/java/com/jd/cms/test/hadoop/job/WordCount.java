@@ -20,6 +20,8 @@ package com.jd.cms.test.hadoop.job;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
@@ -27,6 +29,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.GenericOptionsParser;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.util.StringTokenizer;
@@ -47,15 +50,24 @@ public class WordCount {
         context.write(word, one);
       }
     }
+    protected void cleanup(Context context
+    ) throws IOException, InterruptedException {
+      System.out.println("cleanuping==");
+    }
+
   }
+
+
   
   public static class IntSumReducer 
        extends Reducer<Text,IntWritable,Text,IntWritable> {
     private IntWritable result = new IntWritable();
-
+    static Logger log = Logger.getLogger(IntSumReducer.class);
     public void reduce(Text key, Iterable<IntWritable> values,
                        Context context
                        ) throws IOException, InterruptedException {
+      log.info("zcy===");
+      System.out.println("zcy123");
       int sum = 0;
       for (IntWritable val : values) {
         sum += val.get();

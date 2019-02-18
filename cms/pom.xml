@@ -115,6 +115,13 @@
     </dependency>
     <!-- quartz end -->
 
+      <!-- berkeley DB start -->
+      <dependency>
+          <groupId>berkeleydb</groupId>
+          <artifactId>je</artifactId>
+          <version>3.2.76</version>
+      </dependency>
+      <!-- berkeley Db end -->
 
 
   </dependencies>
