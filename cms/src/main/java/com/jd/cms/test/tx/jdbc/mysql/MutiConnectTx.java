@@ -4,10 +4,9 @@ import java.sql.*;
 
 /**
  * @author zhaochengye
- * @date 2019/4/1 17:02
+ * @date 2019/4/1 19:50
  */
-public class SingleConnectTx {
-
+public class MutiConnectTx {
     public static void main(String[] args) {
         String url ="jdbc:mysql://116.196.79.167:3306/test";
         String user = "root";
@@ -15,20 +14,23 @@ public class SingleConnectTx {
         String sql1 ="select * from  testUser";
         String sql2 ="insert testUser(id,name,age) values(3,'haha','26') ";
         String sql3 ="insert testUser(id,name,age) values(4,'hehe','27') ";
-        Connection con = null;
+        Connection con1 = null;
+        Connection con2 = null;
         Statement statement = null;
-        
+
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection(url,user,password);
-            if(con==null){
-                    System.out.println("连接失败！");
-                    System.exit(0);
+            con1 = DriverManager.getConnection(url,user,password);
+            con2 = DriverManager.getConnection(url,user,password);
+            if(con1==null){
+                System.out.println("连接失败！");
+                System.exit(0);
             }
-            con.setAutoCommit(false);
-            con.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
-            statement = con.createStatement();
+            con1.setAutoCommit(false);
+            con1.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
+
+            statement = con1.createStatement();
 
             Integer rs3 = statement.executeUpdate(sql2);
             Integer rs2 = statement.executeUpdate(sql3);
@@ -42,7 +44,7 @@ public class SingleConnectTx {
         } catch (Exception e) {
             try {
                 System.out.println("rollback");
-                con.rollback();
+                con1.rollback();
 
             } catch (SQLException e1) {
                 e1.printStackTrace();
@@ -51,9 +53,9 @@ public class SingleConnectTx {
         }finally {
             try {
 
-                con.commit();
+                con1.commit();
                 statement.close();
-                con.close();
+                con1.close();
 
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -61,5 +63,4 @@ public class SingleConnectTx {
 
         }
     }
-
 }
