@@ -5,6 +5,7 @@ import com.jd.cms.test.mybatis.mybatisJdbc.TestUserDao;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;
+import org.junit.runner.JUnitCore;
 import org.junit.runner.RunWith;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.test.context.ContextConfiguration;
@@ -30,7 +31,7 @@ public class TestClass {
     /**
      *
      */
-    @Test
+//    @Test
     public void test(){
         myService.doSomething();
         myService.doSomethingElse();
@@ -42,6 +43,13 @@ public class TestClass {
      */
     @Test
     public void testMybatis(){
+
         System.out.println(testUserDao.selectAllTestUser().get(0).getName());
+    }
+
+    public static void main(String[] args) {
+//        JUnitCore.runClasses(SpringJUnit4ClassRunner.class,TestClass.class);
+        JUnitCore.runClasses(SpringJUnit4ClassRunner.class);
+
     }
 }

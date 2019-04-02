@@ -50,13 +50,17 @@
 
 
 
-    <!-- 事务 -->
+    <!-- 声明事务 = 注解加上advice->advisor<-pointcut  -->
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSourceSpringJDBC"></property>
     </bean>
-
     <tx:annotation-driven transaction-manager="txManager"/>
-
+    <tx:advice id="bankAdvice" transaction-manager="txManager"/>
+    <aop:config>
+        <aop:pointcut id="bankPointcut" expression="execution(* *..MyService.*(..))"/>
+        <aop:advisor advice-ref="bankAdvice" pointcut-ref="bankPointcut"/>
+    </aop:config>
+    <!-- 编程式事务 = ctx.getBean(""txManager)... -->
 
 
 </beans>
