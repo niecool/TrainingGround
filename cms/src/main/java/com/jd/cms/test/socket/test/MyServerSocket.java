@@ -48,7 +48,7 @@ public class MyServerSocket {
                 if (selectionKey.isAcceptable()) {
                     SocketChannel socketChannel = ((ServerSocketChannel) selectionKey.channel()).accept();
                     socketChannel.configureBlocking(false);
-                    socketChannel.register(selector, SelectionKey.OP_READ, ByteBuffer.allocate(1024));
+                    socketChannel.register(selector, SelectionKey.OP_READ, ByteBuffer.allocate(64));
                 } else if (selectionKey.isConnectable()) {
                     System.out.println("isConnectable");
                 } else if (selectionKey.isReadable()) {
@@ -65,6 +65,10 @@ public class MyServerSocket {
                         String receivedString = Charset.forName("UTF-8").newDecoder()
                                 .decode(byteBuffer).toString();
                         System.out.println("receiced from client:" + receivedString);
+                        byteBuffer.clear();
+                        byteBuffer.put("我是服务端".getBytes());
+                        byteBuffer.flip();
+                        socketChannel.write(byteBuffer);
                         socketChannel.close();
                     }
 
