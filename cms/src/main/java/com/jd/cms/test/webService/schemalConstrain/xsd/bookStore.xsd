@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.zcy.com/书架"
+        elementFormDefault="qualified">
+
+    <element name="books">
+        <complexType>
+            <sequence>
+                <element name="book">
+                    <complexType>
+                        <sequence>
+                            <element name="name"></element>
+                            <element name="author"></element>
+                            <element name="price" type="integer"></element>
+                        </sequence>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

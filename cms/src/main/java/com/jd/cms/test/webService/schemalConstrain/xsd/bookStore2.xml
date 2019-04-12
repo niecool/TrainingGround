@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><books xmlns="http://www.zcy.com/书架" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.zcy.com/书架 bookStore.xsd">
+    <book>
+        <name>zhaochengye</name>
+        <author>zcy</author>
+        <price>100</price>
+    </book>
+</books>

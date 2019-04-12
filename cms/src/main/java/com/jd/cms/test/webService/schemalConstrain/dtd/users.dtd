@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--        <!ELEMENT users (user+) >-->
+<!--        <!ELEMENT user (name,age,addr) >-->
+<!--        <!ELEMENT name (#PCDATA) >-->
+<!--        <!ELEMENT age (#PCDATA)>-->
+<!--        <!ELEMENT addr (#PCDATA)>-->
+
+<!DOCTYPE users[
+
+        ]>
+                <!ELEMENT users (user+)>
+                <!ELEMENT user (name,age,addr)>
+                <!ELEMENT name (#PCDATA)>
+                <!ELEMENT age (#PCDATA)>
+                <!ELEMENT addr (#PCDATA)>
+                <!ATTLIST user id ID #REQUIRED>
+                <!ENTITY zcy "???">
+

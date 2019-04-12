@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- dtd descript language -->
+<!--<!DOCTYPE users[-->
+<!--        <!ELEMENT users (user+)>-->
+<!--        <!ELEMENT user (name,age,addr)>-->
+<!--        <!ELEMENT name (#PCDATA)>-->
+<!--        <!ELEMENT age (#PCDATA)>-->
+<!--        <!ELEMENT addr (#PCDATA)>-->
+<!--        <!ATTLIST user id ID #REQUIRED>-->
+<!--        <!ENTITY zcy "赵成业">-->
+<!--        ]>-->
+
+<!DOCTYPE users SYSTEM
+        "/Users/zhaochengye/Documents/gitProject/gitUserHand/cms/src/main/java/com/jd/cms/test/webService/schemalConstrain/dtd/users.dtd">
+
+<users>
+    <user id="required">
+        <name>&zcy;</name>
+        <age>26</age>
+        <addr>湖北武汉</addr>
+    </user>
+</users>
