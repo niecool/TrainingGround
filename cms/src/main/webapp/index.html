@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> 首页 </h1>
+<form action="/uploadFile.do" id="form1" method="post" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td>上传文件：</td>
+            <td><input type="file" id="f1" name="" ></td>
+            <td><input type="file" id="f2" name="" ></td>
+            <td><input type="button" value="上传文件" onclick="submitAction()"></td>
+            <td><label>所有文件：</label><textarea>
+            所有文件如下：
+        </textarea></td>
+        </tr>
+        <tr>
+            <td>搜索文件：</td>
+            <td> <input type="text"> </td>
+        </tr>
+        <tr>
+            <td>搜索结果：</td>
+        </tr>
+    </table>
+
+</form>
+<script>
+    var submitAction = function(){
+        var f1 = document.getElementById("f1");
+        f1.name = f1.files[0].name;
+        var f2 = document.getElementById("f2");
+        f2.name = f2.files[0].name;
+        var form = document.getElementById("form1");
+        form.submit();
+    }
+
+</script>
+
+</body>
+</html>

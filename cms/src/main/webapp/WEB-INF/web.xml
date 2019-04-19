@@ -4,4 +4,12 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>uploadFile</servlet-name>
+    <servlet-class>com.jd.cms.test.controller.servlet.UploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>uploadFile</servlet-name>
+    <url-pattern>/uploadFile.do</url-pattern>
+  </servlet-mapping>
 </web-app>
