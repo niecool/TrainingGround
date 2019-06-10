@@ -10,7 +10,7 @@
 
     <property>
         <name>fs.defaultFS</name>
-        <value>hdfs://hadoopcm0:8020/</value>
+        <value>hdfs://jqhadoop-search-01.int.yihaodian.com:8020/</value>
     </property>
 
     <property>

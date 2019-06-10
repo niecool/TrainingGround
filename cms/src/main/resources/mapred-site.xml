@@ -31,12 +31,12 @@
     </property>
     <property>
         <name>mapreduce.jobhistory.address</name>
-        <value>hadoopcm0:10020</value>
+        <value>jqhadoop-search-01.int.yihaodian.com:10020</value>
     </property>
 
     <property>
         <name>mapreduce.jobhistory.webapp.address</name>
-        <value>hadoopcm0:19888</value>
+        <value>jqhadoop-search-01.int.yihaodian.com:19888</value>
     </property>
 
     <property>

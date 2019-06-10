@@ -26,7 +26,7 @@ public class HDFSUtils {
 //
 //        try{
 //            // HDFS的访问路径
-//            hdfsUri = new URI("hdfs://hadoopcm0:8020/");
+//            hdfsUri = new URI("hdfs://jqhadoop-search-01.int.yihaodian.com:8020/");
 ////            fs = FileSystem.get(conf);
 //            fs = FileSystem.get(hdfsUri,conf,hdfsUserName);
 //        }catch (Exception e){
@@ -73,7 +73,7 @@ public class HDFSUtils {
                     URI hdfsUri = null;
                     try {
                         // HDFS的访问路径
-                        hdfsUri = new URI("hdfs://hadoopcm0:8020/");
+                        hdfsUri = new URI("hdfs://jqhadoop-search-01.int.yihaodian.com:8020/");
                     } catch (URISyntaxException e) {
                         e.printStackTrace();
                     }

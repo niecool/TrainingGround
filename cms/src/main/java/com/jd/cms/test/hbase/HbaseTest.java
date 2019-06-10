@@ -13,6 +13,9 @@ public class HbaseTest {
 
     public static void main(String[] args) throws Exception {
         HbaseUtils ut = new HbaseUtils();
-        ut.readTableInfo("sam_product");
+//        ut.readTableInfo("mars_index_sam_updateItem");
+//        ut.readTable("mars_index_sam_updateItem");
+        ut.get("63382402_3",null,"mars_index_sam_updateItem");
+        System.out.println("success");
     }
 }

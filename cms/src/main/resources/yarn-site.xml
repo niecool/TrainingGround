@@ -14,7 +14,7 @@
 
     <property>
         <name>yarn.resourcemanager.hostname</name>
-        <value>hadoopcm0</value>
+        <value>jqhadoop-search-01.int.yihaodian.com</value>
     </property>
 
     <property>

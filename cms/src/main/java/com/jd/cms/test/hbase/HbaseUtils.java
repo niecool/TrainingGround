@@ -1,5 +1,6 @@
 package com.jd.cms.test.hbase;
 
+import com.yihaodian.common.serializer.impl.KryoSerializer;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.*;
 import org.apache.hadoop.hbase.client.*;
@@ -30,9 +31,10 @@ public class HbaseUtils {
      */
     public static Configuration getConfiguration(){
         Configuration conf = HBaseConfiguration.create();
-        conf.set("hbase.zookeeper.quorum", "10.161.166.210,10.161.166.211,10.161.166.212,10.161.166.213,10.161.166.214");
+//        conf.set("hbase.zookeeper.quorum", "10.161.166.210,10.161.166.211,10.161.166.212,10.161.166.213,10.161.166.214");
+        conf.set("hbase.zookeeper.quorum", "10.17.28.63,10.17.28.64,10.17.28.65");
         conf.set("hbase.zookeeper.property.clientPort", "2181");
-        conf.set("hbase.master", "192.168.130.106");
+        conf.set("hbase.master", "10.17.28.63");
         return conf;
     }
 
@@ -103,7 +105,7 @@ public class HbaseUtils {
      * return:table context
      */
     public void readTable(String tname){
-
+//        KryoSerializer _serializer = new KryoSerializer(false);
         //To String convert to TableName
         TableName tableName = TableName.valueOf(tname);
         try {
@@ -117,23 +119,28 @@ public class HbaseUtils {
                 HTableInterface table = connection.getTable(tableName);
 
                 ResultScanner resultScanner = table.getScanner(new Scan());
-
+                int count = 0;
                 for (Result result:resultScanner){
                     for (Cell cell:result.listCells()){
                         //取行健
                         String rowKey=Bytes.toString(CellUtil.cloneRow(cell));
-                        //取到时间戳
-                        long timestamp = cell.getTimestamp();
-                        //取到族列
-                        String family = Bytes.toString(CellUtil.cloneFamily(cell));
-                        //取到修饰名
-                        String qualifier  = Bytes.toString(CellUtil.cloneQualifier(cell));
-                        //取到值
-                        String value = Bytes.toString(CellUtil.cloneValue(cell));
+                        if(rowKey.equals("63382402_3")){
+                            //取到时间戳
+                            long timestamp = cell.getTimestamp();
+                            //取到族列
+                            String family = Bytes.toString(CellUtil.cloneFamily(cell));
+                            //取到修饰名
+                            String qualifier  = Bytes.toString(CellUtil.cloneQualifier(cell));
+                            //取到值
+                            String value = Bytes.toString(CellUtil.cloneValue(cell));
 
-                        System.out.println(" ====> RowKey : " + rowKey + ",  Timestamp : " +
-                                timestamp + ", ColumnFamily : " + family + ", Key : " + qualifier
-                                + ", Value : " + value);
+                            System.out.println(" ====> RowKey : " + rowKey + ",  Timestamp : " +
+                                    timestamp + ", ColumnFamily : " + family + ", Key : " + qualifier
+                                    + ", Value : " + value);
+                        }else {
+                            System.out.println(count++);
+                        }
+
                     }
                 }
                 resultScanner.close();
@@ -144,6 +151,43 @@ public class HbaseUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void get(String key, Long timestamp,String tname) throws Exception {
+
+
+        Get get = new Get(key.getBytes());
+        if (timestamp != null)
+            get.setTimeStamp(timestamp);
+//        HTableInterface table = getHTable();
+        TableName tableName = TableName.valueOf(tname);
+        HTableInterface table = connection.getTable(tableName);
+        try {
+            Result rs = table.get(get);
+            for (Cell cell:rs.listCells()){
+                //取行健
+                String rowKey=Bytes.toString(CellUtil.cloneRow(cell));
+                if(rowKey.equals("63382402_3")){
+                    //取到时间戳
+                    long timestamps = cell.getTimestamp();
+                    //取到族列
+                    String family = Bytes.toString(CellUtil.cloneFamily(cell));
+                    //取到修饰名
+                    String qualifier  = Bytes.toString(CellUtil.cloneQualifier(cell));
+                    //取到值
+                    String value = Bytes.toString(CellUtil.cloneValue(cell));
+
+                    System.out.println(" ====> RowKey : " + rowKey + ",  Timestamp : " +
+                            timestamps + ", ColumnFamily : " + family + ", Key : " + qualifier
+                            + ", Value : " + value);
+                }
+
+            }
+        } catch (IOException e) {
+            throw new Exception("Failed to get " + new String(table.getTableName()) + ":"
+                    + key, e);
+        }
+
     }
 
     /**
