@@ -241,7 +241,19 @@ public class TestImpl implements Test {
                     int tmp = A[i][k]; A[i][k] = A[i][j]^1; A[i][j] = tmp^1;
                 }
             }
-            return A; } }
+            return A;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 

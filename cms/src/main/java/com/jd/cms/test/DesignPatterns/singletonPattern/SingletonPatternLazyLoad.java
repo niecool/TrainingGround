@@ -32,12 +32,11 @@ public class SingletonPatternLazyLoad {
 
     //3.使用静态内部类
     public static InnerClass getInstanceByStaticInnerClass(){
-        innerClassInstance = new InnerClass();
-        return innerClassInstance;
+        return InnerClass.innerClassInstance;
     }
 
     public static class  InnerClass{
-
+        private static InnerClass innerClassInstance = new InnerClass();
     }
 
 

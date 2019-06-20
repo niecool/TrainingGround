@@ -25,7 +25,7 @@ public class BubbleSort implements SortAbstract {
         Integer len = arr.length;
         Integer temp;
         for (int i = 0; i < len; i++) {
-            for (int j = 0; j < len-1; j++) {
+            for (int j = 0; j < len-1; j++) {//todo len-1-i才是真正理解冒泡排序
                 if(arr[j]<arr[j+1]){
                     temp = arr[j];
                     arr[j] = arr[j+1];
