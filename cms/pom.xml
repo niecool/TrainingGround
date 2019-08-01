@@ -32,142 +32,142 @@
     </dependency>
 
 
-    <!-- spring mvc start-->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-webmvc</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
+<!--    &lt;!&ndash; spring mvc start&ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>spring-webmvc</artifactId>-->
+<!--      <version>${spring.version}</version>-->
+<!--    </dependency>-->
 
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-web</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>spring-web</artifactId>-->
+<!--      <version>${spring.version}</version>-->
+<!--    </dependency>-->
 
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-jdbc</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>spring-jdbc</artifactId>-->
+<!--      <version>${spring.version}</version>-->
+<!--    </dependency>-->
 
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-aop</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>spring-aop</artifactId>-->
+<!--      <version>${spring.version}</version>-->
+<!--    </dependency>-->
 
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-beans</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>spring-beans</artifactId>-->
+<!--      <version>${spring.version}</version>-->
+<!--    </dependency>-->
 
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-core</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>spring-core</artifactId>-->
+<!--      <version>${spring.version}</version>-->
+<!--    </dependency>-->
 
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-tx</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
-
-
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context-support</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
-    <!-- spring mvc end-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>spring-tx</artifactId>-->
+<!--      <version>${spring.version}</version>-->
+<!--    </dependency>-->
 
 
-    <!-- hadoop start-->
-    <dependency>
-      <groupId>org.apache.hadoop</groupId>
-      <artifactId>hadoop-client</artifactId>
-      <version>${hadoop.version}</version>
-    </dependency>
-    <!-- hadoop end-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>spring-context</artifactId>-->
+<!--      <version>${spring.version}</version>-->
+<!--    </dependency>-->
 
-    <!-- hbase -->
-    <dependency>
-      <groupId>org.apache.hbase</groupId>
-      <artifactId>hbase-client</artifactId>
-      <version>${hbase.version}</version>
-    </dependency>
-    <!-- hbase end -->
-
-    <!-- quartz start -->
-    <dependency>
-      <groupId>org.quartz-scheduler</groupId>
-      <artifactId>quartz</artifactId>
-      <version>2.2.1</version>
-    </dependency>
-    <!-- quartz end -->
-
-      <!-- berkeley DB start -->
-      <dependency>
-          <groupId>berkeleydb</groupId>
-          <artifactId>je</artifactId>
-          <version>3.2.76</version>
-      </dependency>
-    <!-- berkeley Db end -->
-
-    <dependency>
-      <groupId>org.aspectj</groupId>
-      <artifactId>aspectjweaver</artifactId>
-      <version>1.8.13</version>
-    </dependency>
-
-    <dependency>
-      <groupId>cglib</groupId>
-      <artifactId>cglib-nodep</artifactId>
-      <version>3.2.10</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-tx</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-test</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>spring-context-support</artifactId>-->
+<!--      <version>${spring.version}</version>-->
+<!--    </dependency>-->
+<!--    &lt;!&ndash; spring mvc end&ndash;&gt;-->
 
 
-    <!-- mysql-connector -->
-    <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <version>6.0.6</version>
-    </dependency>
+<!--    &lt;!&ndash; hadoop start&ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>org.apache.hadoop</groupId>-->
+<!--      <artifactId>hadoop-client</artifactId>-->
+<!--      <version>${hadoop.version}</version>-->
+<!--    </dependency>-->
+<!--    &lt;!&ndash; hadoop end&ndash;&gt;-->
+
+<!--    &lt;!&ndash; hbase &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>org.apache.hbase</groupId>-->
+<!--      <artifactId>hbase-client</artifactId>-->
+<!--      <version>${hbase.version}</version>-->
+<!--    </dependency>-->
+<!--    &lt;!&ndash; hbase end &ndash;&gt;-->
+
+<!--    &lt;!&ndash; quartz start &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>org.quartz-scheduler</groupId>-->
+<!--      <artifactId>quartz</artifactId>-->
+<!--      <version>2.2.1</version>-->
+<!--    </dependency>-->
+<!--    &lt;!&ndash; quartz end &ndash;&gt;-->
+
+<!--      &lt;!&ndash; berkeley DB start &ndash;&gt;-->
+<!--      <dependency>-->
+<!--          <groupId>berkeleydb</groupId>-->
+<!--          <artifactId>je</artifactId>-->
+<!--          <version>3.2.76</version>-->
+<!--      </dependency>-->
+<!--    &lt;!&ndash; berkeley Db end &ndash;&gt;-->
+
+<!--    <dependency>-->
+<!--      <groupId>org.aspectj</groupId>-->
+<!--      <artifactId>aspectjweaver</artifactId>-->
+<!--      <version>1.8.13</version>-->
+<!--    </dependency>-->
+
+<!--    <dependency>-->
+<!--      <groupId>cglib</groupId>-->
+<!--      <artifactId>cglib-nodep</artifactId>-->
+<!--      <version>3.2.10</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>spring-tx</artifactId>-->
+<!--      <version>${spring.version}</version>-->
+<!--    </dependency>-->
+
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>spring-test</artifactId>-->
+<!--      <version>${spring.version}</version>-->
+<!--    </dependency>-->
+
+
+<!--    &lt;!&ndash; mysql-connector &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>mysql</groupId>-->
+<!--      <artifactId>mysql-connector-java</artifactId>-->
+<!--      <version>6.0.6</version>-->
+<!--    </dependency>-->
 
 
 
-      <!-- mybatis -->
-    <dependency>
-      <groupId>org.mybatis</groupId>
-      <artifactId>mybatis</artifactId>
-      <version>3.4.0</version>
-    </dependency>
+<!--      &lt;!&ndash; mybatis &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>org.mybatis</groupId>-->
+<!--      <artifactId>mybatis</artifactId>-->
+<!--      <version>3.4.0</version>-->
+<!--    </dependency>-->
 
-    <!--mybatis-spring适配器 -->
-    <dependency>
-      <groupId>org.mybatis</groupId>
-      <artifactId>mybatis-spring</artifactId>
-      <version>1.3.0</version>
-    </dependency>
+<!--    &lt;!&ndash;mybatis-spring适配器 &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>org.mybatis</groupId>-->
+<!--      <artifactId>mybatis-spring</artifactId>-->
+<!--      <version>1.3.0</version>-->
+<!--    </dependency>-->
 
 
   </dependencies>
